@@ -13,26 +13,26 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
     inputs:
-      logLevel:
-        description: 'Log level'
+      level:
+        description: '지정값 선택'
         required: true
-        default: 'warning'
+        default: 'level1'
         type: choice
         options:
-          - info
-          - warning
-          - debug
-      print_tags:
-        description: 'True to print to STDOUT'
+          - level1
+          - level2
+          - level3
+      check:
+        description: 'True or False'
         required: true
         type: boolean
-      tags:
-        description: 'Test scenario tags'
+      text:
+        description: '여기에 값 입력'
         required: true
         type: string
-      environment:
-        description: 'Environment to run tests against'
-        type: environment
+      number:
+        description: '여기에 숫자 입력'
+        type: number
         required: true
         
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
