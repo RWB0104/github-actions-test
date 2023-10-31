@@ -1,0 +1,14 @@
+name: jobs test
+on: workflow_dispatch
+jobs:
+  jobs_test1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test steps
+        run: echo Hello, jobs_test1
+
+  jobs_test2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test steps
+        run: echo Hello, jobs_test2
