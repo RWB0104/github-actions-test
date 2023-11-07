@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       result: output1
-      cal: output2
+      call: output2
     steps:
       - name: test steps
         run: echo Hello World
@@ -16,5 +16,5 @@ jobs:
     steps:
       - name: test steps
         run: |
-          echo ${{ needs.output_test.outputs.output1 }}
-          echo ${{ needs.output_test.outputs.output2 }}
+          echo ${{ needs.output_test.outputs.result }}
+          echo ${{ needs.output_test.outputs.call }}
