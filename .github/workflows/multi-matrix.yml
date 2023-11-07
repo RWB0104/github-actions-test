@@ -1,0 +1,12 @@
+name: multi matrix test
+on: workflow_dispatch
+jobs:
+  matrix_test:
+    strategy:
+      matrix:
+        os: [ ubuntu-latest, windows-latest, macos-latest ]
+        version: [ 16, 18 ]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: test steps
+        run: echo Hello World in ${{ matrix.os }} ${{ matrix.version }}
