@@ -13,3 +13,10 @@ jobs:
       - name: output check
         run: echo ${{ steps.key.outputs.VAR }}
           
+  check:
+    runs-on: ubuntu-latest
+    needs: job
+
+    steps:
+      - name: output check in other job
+        run: echo ${{ needs.job.key.outputs.call }}
