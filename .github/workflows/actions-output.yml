@@ -11,5 +11,5 @@ jobs:
         run: echo "VAR=action output" >> $GITHUB_OUTPUT
 
       - name: output check
-        run: ${{ steps.key.outputs.VAR }}
+        run: echo ${{ steps.key.outputs.VAR }}
           
