@@ -4,8 +4,8 @@ on: workflow_dispatch
 jobs:
   job:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 0.1
 
     steps:
       - name: half min test
-        run: sleep 30
+        run: sleep 60
